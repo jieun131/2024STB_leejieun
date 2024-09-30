@@ -31,6 +31,15 @@ pie(table(KOTRA2024 $`type of investment`), col=colors, main="해외진출기업
 install.packages("RColorBrewer")
 library(RColorBrewer)#패키지를 라이브러리에 등록
 
+#무지개색
+pie(table(KOTRA2024 $`type of investment`), col=rainbow(12), main="해외진출기업의 투자형태")
+#적색과 황색에 치우친 색
+pie(table(KOTRA2024 $`type of investment`), col=heat.colors(12), main="해외진출기업의 투자형태")
+#지구 지형 색
+pie(table(KOTRA2024 $`type of investment`), col=terrain.colors(12), main="해외진출기업의 투자형태")
+#앞에서 조금 더 청색에 가까운 색
+pie(table(KOTRA2024 $`type of investment`), col=topo.colors(12), main="해외진출기업의 투자형태")
+
 display.brewer.all()#패키지 확인
 
 #설치된 팔레트로 파이차트의 색상을 변경해 보자!
